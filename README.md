@@ -46,10 +46,6 @@ Plot histogram and Q-Q plot of residuals to check if they follow a normal distri
 ### Developed by: THARUN V K
 ### RegisterNumber:  212223230231
 ```python
-/*
- Program to implement linear regression model for predicting car prices and test assumptions.
-Developed by: THARUN V K
-RegisterNumber:  212223230231
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
@@ -113,7 +109,6 @@ sm.qqplot(residuals, line='45', fit=True, ax=ax2)
 ax2.set_title("Q-Q Plot")
 plt.tight_layout()
 plt.show()
-*/
 ```
 
 ## Output:
