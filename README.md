@@ -42,6 +42,9 @@ Plot residuals against predicted values to ensure that the residuals have consta
 Plot histogram and Q-Q plot of residuals to check if they follow a normal distribution.
 
 ## Program:
+### Program to implement linear regression model for predicting car prices and test assumptions.
+### Developed by: THARUN V K
+### RegisterNumber:  212223230231
 ```python
 /*
  Program to implement linear regression model for predicting car prices and test assumptions.
@@ -60,6 +63,7 @@ df=pd.read_csv('CarPrice_Assignment.csv')
 x=df[['enginesize','horsepower','citympg','highwaympg']]
 y=df['price']
 x_train,x_test,y_train,y_test=train_test_split(x,y,test_size=0.2,random_state=42)
+
 scaler=StandardScaler()
 x_train_scaled=scaler.fit_transform(x_train)
 x_test_scaled=scaler.transform(x_test)
@@ -76,6 +80,7 @@ print(f"{'MSE':>12}: {mean_squared_error(y_test,y_pred):>10.2f}")
 print(f"{'RMSE':>12}:{np.sqrt(mean_squared_error(y_test,y_pred)):>10.2f}")
 print(f"{'R-squares':>12}:{r2_score(y_test,y_pred):10.2f}")
 print("="*50)
+
 # 1. Linearity check
 plt.figure(figsize=(10, 5))
 plt.scatter(y_test, y_pred, alpha=0.6)
