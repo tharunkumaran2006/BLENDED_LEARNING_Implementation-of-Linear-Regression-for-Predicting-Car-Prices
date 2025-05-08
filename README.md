@@ -55,6 +55,7 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_squared_error, r2_score
 import statsmodels.api as sm
+
 df=pd.read_csv('CarPrice_Assignment.csv')
 x=df[['enginesize','horsepower','citympg','highwaympg']]
 y=df['price']
@@ -67,6 +68,7 @@ model=LinearRegression()
 model.fit(x_train_scaled,y_train)
 y_pred=model.predict(x_test_scaled)
 print("="*50)
+
 print("MODEL COEFFICIENTS:")
 for feature,coef in zip(x.columns,model.coef_):
     print(f"{feature:>12}: {coef:>10.2f}")
